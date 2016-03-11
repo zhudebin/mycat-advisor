@@ -1,8 +1,0 @@
-/*TMODJS:{"version":1,"md5":"b0d6a1c3c72a43f4857cf460fe93cb9d"}*/
-template('chart/easypie',function($data,$filename
-/**/) {
-'use strict';var $utils=this,$helpers=$utils.$helpers,include=function(filename,data){data=data||$data;var text=$utils.$include(filename,data,$filename);$out+=text;return $out;},$out='';$out+='<div class="container"> ';
-include('../public/breadcrumbs');
-$out+=' <div class="row"> <div class="col-sm-3"> <div class="epc-item bgm-pink"> <div class="easy-pie main-pie" data-percent="45"> <div class="percent">45</div> <div class="pie-title">Total Emails Sent</div> </div> </div> </div> <div class="col-sm-3"> <div class="epc-item bgm-orange"> <div class="easy-pie main-pie" data-percent="88"> <div class="percent">88</div> <div class="pie-title">Sold Items</div> </div> </div> </div> <div class="col-sm-3"> <div class="epc-item bgm-green"> <div class="easy-pie main-pie" data-percent="25"> <div class="percent">25</div> <div class="pie-title">Spam Mails</div> </div> </div> </div> <div class="col-sm-3"> <div class="epc-item bgm-purple"> <div class="easy-pie main-pie" data-percent="89"> <div class="percent">89</div> <div class="pie-title">Profit Rate</div> </div> </div> </div> </div> </div> <script src="lib/chart/jquery.easy-pie-chart/jquery.easypiechart.js"></script> <script> mycatui.chart.easyPieChart($(\'.main-pie\'), \'rgba(255,255,255,0.2)\', \'rgba(255,255,255,0.5)\', \'rgba(255,255,255,0.7)\', 7, \'butt\', 148); </script>';
-return new String($out);
-});
