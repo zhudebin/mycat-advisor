@@ -16,6 +16,7 @@
 package org.apache.mycat.advisor.common.net.ip2area;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.mycat.advisor.common.net.http.HttpService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
