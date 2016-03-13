@@ -16,6 +16,8 @@
 
 package org.apache.mycat.advisor.common.security.shiro;
 
+import org.apache.mycat.advisor.common.security.shiro.exception.AccountForbiddenException;
+import org.apache.mycat.advisor.common.security.shiro.exception.AccountLockedException;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;

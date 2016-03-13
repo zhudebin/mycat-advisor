@@ -16,6 +16,7 @@
 package org.apache.mycat.advisor.common.security.shiro;
 
 import freemarker.template.TemplateException;
+import org.apache.mycat.advisor.common.security.shiro.tags.ShiroTags;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import java.io.IOException;

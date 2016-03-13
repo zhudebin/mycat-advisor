@@ -16,6 +16,7 @@
 package org.apache.mycat.advisor.common.security.shiro.distribution.Jedis;
 
 
+import org.apache.mycat.advisor.common.security.shiro.distribution.DistributeCache;
 import org.apache.mycat.advisor.common.security.shiro.distribution.DistributeCacheFactory;
 
 /**

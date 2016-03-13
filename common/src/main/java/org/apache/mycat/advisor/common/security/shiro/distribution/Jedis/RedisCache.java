@@ -15,7 +15,7 @@
 */
 package org.apache.mycat.advisor.common.security.shiro.distribution.Jedis;
 
-import com.transfar.greentech.common.shiro.distribution.DistributeCacheRpository;
+import org.apache.mycat.advisor.common.security.shiro.distribution.DistributeCacheRpository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
