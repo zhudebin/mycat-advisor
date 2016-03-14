@@ -5,6 +5,8 @@
 package org.apache.mycat.advisor.common.net.sms;
 
 
+import org.apache.mycat.advisor.common.net.http.HttpService;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -51,8 +53,9 @@ public class YunpianSms {
         Map<String, String> params = new HashMap<String, String>();
         params.put("apikey", this.getApiKey());
         params.put("text", content);
+        params.put("web", mobile);
         params.put("mobile", mobile);
-        String result=HttpService.doHttpClientPost(SMS_SEND,params);
+        String result= HttpService.doHttpClientPost(SMS_SEND, params);
         return result;
     }
 

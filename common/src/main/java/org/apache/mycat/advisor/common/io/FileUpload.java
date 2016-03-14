@@ -15,8 +15,8 @@
 */
 package org.apache.mycat.advisor.common.io;
 
-import com.transfar.greentech.common.datetime.DateTimeUtils;
-import com.transfar.greentech.common.lang.StringSeriesTools;
+import org.apache.mycat.advisor.common.datetime.DateTimeUtils;
+import org.apache.mycat.advisor.common.lang.StringSeriesTools;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
