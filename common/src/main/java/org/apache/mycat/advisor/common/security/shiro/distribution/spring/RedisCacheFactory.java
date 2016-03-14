@@ -15,6 +15,8 @@
 */
 package org.apache.mycat.advisor.common.security.shiro.distribution.spring;
 
+import org.apache.mycat.advisor.common.security.shiro.distribution.DistributeCache;
+import org.apache.mycat.advisor.common.security.shiro.distribution.DistributeCacheFactory;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.RedisSerializer;
