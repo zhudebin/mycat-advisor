@@ -40,7 +40,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer{
         //扫描xml文件
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver.getResources("classpath*:mapper/*Mapper.xml"));
+            bean.setMapperLocations(resolver.getResources("classpath*:**/*Mapper.xml"));
             return bean.getObject();
         } catch (Exception e) {
             log.error("自动扫描MyBatis映射XML文件失败！",e);

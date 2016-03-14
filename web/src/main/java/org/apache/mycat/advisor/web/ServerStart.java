@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan
+@ComponentScan("org.apache.mycat.advisor")
 public class ServerStart extends SpringBootServletInitializer {
     private static final Logger logger= LoggerFactory.getLogger(ServerStart.class);
 
