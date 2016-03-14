@@ -1,4 +1,4 @@
-package org.apache.mycat.advisor.mobile.passport;
+package org.apache.mycat.advisor.web.passport;
 
 /**
  * package: org.apache.mycat.advisor.desktop.passport <br/>

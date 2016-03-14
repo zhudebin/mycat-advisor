@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- 注意修改此处的驱动包位置-->
+    <classPathEntry location="D:\localRepo\mysql\mysql-connector-java\5.1.34\mysql-connector-java-5.1.34.jar"/>
+    <context id="MySQL" targetRuntime="MyBatis3">
+        <!--去除注释  -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/test"
+                        userId="root" password="root"></jdbcConnection>
+        <javaModelGenerator targetPackage="org.apache.mycat.advisor.persistence.model" targetProject="MAVEN">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="false"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="org.apache.mycat.advisor.persistence.mapper" targetProject="MAVEN">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="org.apache.mycat.advisor.persistence.dao" targetProject="MAVEN">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+        <!-- 用户信息 -->
+        <table tableName="user_info" domainObjectName="UserInfo"
+               enableInsert="true" enableSelectByPrimaryKey="true"
+               enableUpdateByPrimaryKey="true" enableDeleteByPrimaryKey="true"
+               enableSelectByExample="false" enableDeleteByExample="false"
+               enableCountByExample="false" enableUpdateByExample="false">
+            <!-- 是否使用表源字段作为Model属性名称 -->
+            <property name="useActualColumnNames" value="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
