@@ -1,5 +1,7 @@
 package org.apache.mycat.advisor.persistence.model.usercenter;
 
+import java.io.Serializable;
+
 /**
  * package: springboot.simple.model <br/>
  * functional describe:
@@ -7,7 +9,8 @@ package org.apache.mycat.advisor.persistence.model.usercenter;
  * @author DR.YangLong [410357434@163.com]
  * @version 1.0    2016/3/13 15:58
  */
-public class UserInfo {
+public class UserInfo implements Serializable{
+    private static final long serialVersionUID = -6475018685882189951L;
     private Integer id;
     private String userName;
 

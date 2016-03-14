@@ -1,7 +1,7 @@
 # 端口，暂无作用
 server:
       port:8080
-      context-path: #/advisor/
+      #context-path: #/advisor/
 # spring 配置
 spring:
     datasource:
