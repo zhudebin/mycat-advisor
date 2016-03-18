@@ -2,8 +2,9 @@
 
 cd `dirname $0`
 
+yum -y update; yum clean all
 # Install modules
-for m in os scm zsh jdk8 maven mycat mysql nginx php phpmyadmin tomcat probe zookeeper; do
+for m in os scm zsh jdk8 maven mycat mysql nginx php phpmyadmin tomcat probe zookeeper redis; do
     if [ -d ${m} ]; then
         echo -e "\n---- Install module ${m} ----"
         cd ${m}

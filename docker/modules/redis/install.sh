@@ -1,22 +1,16 @@
 #!/bin/bash
 
-ver='2.3.3'
-pkg="probe-${ver}.zip"
-dest='/opt/javahome/probe'
+yum install -y curl tar make gcc wget
 
-[ -f "../cache/${pkg}" ] && pkg="../cache/${pkg}" || wget http://dl.mycat.io/${pkg}
+cd /usr/local/src && \
+wget  http://download.redis.io/releases/redis-2.8.13.tar.gz  && \
+tar xf redis-2.8.13.tar.gz && \
+cd redis-2.8.13 && \
+make && \
+make install
 
-cd /tmp && \
-  wget http://download.redis.io/redis-stable.tar.gz && \
-  tar xvzf redis-stable.tar.gz && \
-  cd redis-stable && \
-  make && \
-  make install && \
-  cp -f src/redis-sentinel /usr/local/bin && \
-  mkdir -p /etc/redis && \
-  cp -f *.conf /etc/redis && \
-  rm -rf /tmp/redis-stable* && \
-  sed -i 's/^\(bind .*\)$/# \1/' /etc/redis/redis.conf && \
-  sed -i 's/^\(daemonize .*\)$/# \1/' /etc/redis/redis.conf && \
-  sed -i 's/^\(dir .*\)$/# \1\ndir \/data/' /etc/redis/redis.conf && \
-  sed -i 's/^\(logfile .*\)$/# \1/' /etc/redis/redis.conf
+cat > /etc/supervisord.d/redis.conf << EOF
+[program:redis]
+command=/usr/local/bin/redis-server
+autorestart=true
+EOF
