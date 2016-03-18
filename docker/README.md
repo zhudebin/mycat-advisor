@@ -12,15 +12,20 @@
 
 # 第三方docker资料
 
-
 [docker入门指南][1]
-
 [mac docker安装手册][2]
-
 [windows docker安装手册][3]
 
-# Docker环境准备
+# Quick Start
+**强烈建议**直接使用在本地安装好docker环境后,使用daocloud来建已经做的初始化环境部署到本地docker,使用非常方便.
 
+https://dashboard.daocloud.io
+
+
+
+
+
+# Docker环境准备
 
 ~~可以用Boot2Docker在Windows上安装，或者导入已经安装好整个平台的Redhat Atomict 虚机镜像~~
 
