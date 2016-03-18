@@ -67,3 +67,6 @@ ios项目模块。
 
 ## reactapp模块
 react-native实现的跨终端app。
+
+## docker 模块
+更多看 https://github.com/MyCATApache/mycat-advisor/blob/master/docker/README.md
