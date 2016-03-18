@@ -3,7 +3,7 @@
 cd `dirname $0`
 
 # Install modules
-for m in os scm zsh jdk8 maven mycat mysql nginx php phpmyadmin tomcat probe zookeeper ice; do
+for m in os scm zsh jdk8 maven mycat mysql nginx php phpmyadmin tomcat probe zookeeper; do
     if [ -d ${m} ]; then
         echo -e "\n---- Install module ${m} ----"
         cd ${m}

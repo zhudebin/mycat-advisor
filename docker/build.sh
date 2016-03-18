@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build --rm=true -t openep .
+docker build --rm=true -t advisor .
