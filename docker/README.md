@@ -26,7 +26,7 @@
 
 ~~虚机的用户名密码 root/mycat1314~~
 ~~虚机网络，eth0为NAT网络，eth1为一个Host-Only的子网，子网网段为172.16.0.0/16 ，其中IP地址固定为172.16.88.8 ，需要自己配置VirtualBox或VM的网络并绑定到虚机的eth1网卡上。~~
-~~运行 docker ps -a 查询mycat ep的镜像~~
+~~运行 docker ps -a 查询mycat advisor的镜像~~
 ~~docker start xxxxcontainID 启动镜像~~
 
 ~~浏览器访问 http://172.16.88.8:9001  用户名密码root/123456~~
@@ -76,12 +76,12 @@ chmod +x run*.sh
 
 host方式启动(共享宿主网络, 推荐, 但是只能启动一个实例)
 ```bash
-./run-host.sh openep [containerName]
+./run-host.sh advisor [containerName]
 ```
 
 bridge方式启动(docker私有网络, 默认)
 ```bash
-./run.sh openep [containerName]
+./run.sh advisor [containerName]
 ```
 
 # 使用说明
@@ -107,6 +107,7 @@ bridge方式启动(docker私有网络, 默认)
 | probe        |            | tomcat管理工具: http://host:port/probe |
 | zookeeper    | 2181       | 集群工具                               |
 | ice          | 12000 12001| rpc中间件                              |
+| redis        | | rpc中间件                              |
 
 # 如何管理
 

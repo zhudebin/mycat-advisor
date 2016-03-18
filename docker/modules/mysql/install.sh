@@ -13,6 +13,8 @@ create database db2;
 create database db3;
 EOF
 
+mysql -uroot -p123456 mysql_advisor < init/mysql_advisor.sql
+
 mysqladmin -u root password "123456"
 
 service mysqld stop
