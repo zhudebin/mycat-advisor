@@ -49,6 +49,19 @@ route add 172.17.0.0 mask 255.255.255.0 192.168.99.100
 
 # 构建镜像
 
+## 环境准备
+构建环境 centos7 visualbox
+> 如何添加yum源
+﻿- http://www.centoscn.com/CentOS/2015/0918/6186.html
+﻿- http://www.cnblogs.com/mchina/archive/2013/01/04/2842275.html
+
+```
+sudo yum install -y docker-io
+﻿sudo service docker start
+```
+
+> 在centos7环境下
+
 ### 1. 构建centos基础镜像, 仅支持centos6
 
 ```bash
@@ -150,3 +163,8 @@ rpm -ql ice-python
 [1]: http://www.widuu.com/chinese_docker/
 [2]: http://www.widuu.com/chinese_docker/installation/macos.html
 [3]: http://www.widuu.com/chinese_docker/installation/windows.html
+
+# 使用daocloud构建
+daocloud是建立在云端的一个
+
+进入https://dashboard.daocloud.io/build-flows目录,然后创建项目,然后自动构建
