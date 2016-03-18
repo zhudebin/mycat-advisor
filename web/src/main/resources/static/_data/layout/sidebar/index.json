@@ -2,7 +2,7 @@
   "flag": true,
   "data": {
     "profileInfo":{
-      "photo":"img/profile-pics/1.jpg",
+      "photo":"static/img/profile-pics/1.jpg",
       "hello":"欢迎回来！"
     }
   }
