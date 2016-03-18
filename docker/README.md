@@ -167,4 +167,6 @@ rpm -ql ice-python
 # 使用daocloud构建
 daocloud是建立在云端的一个
 
-进入https://dashboard.daocloud.io/build-flows目录,然后创建项目,然后自动构建
+进入https://dashboard.daocloud.io/build-flows目录,然后创建项目,然后自动构建.
+构建成功后,可以使用daocloud来部署到自己的主机上,非常方便开发,然后你就可以在本地进行开发啦.
+我们所以的环境就这样愉快的准备好啦!!!
