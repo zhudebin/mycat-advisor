@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>登录</title>
+  
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+	</head>
+	<style>
+	 
+	</style>
+	<body style="background: #2EBBCB;">
+		<div id="login-back" class="login-back">
+		</div>
+	    <div class="mui-content login-logo">
+	    	<p class="login-Imag">
+	    		<!--
+	    			<img id="logo" width="110" height="110" src="../images/default_logo.png"" />
+	    		-->
+	    		<span></span>
+	    	</p>
+	    	<h4 class="login-name">
+	    		顶尖顾问在线
+	    	</h4>
+			<div class="login-Msg">
+				<h4>正在登录...</h4>
+			</div>
+	    </div>
+	    <div class="mui-content" id="loginCont">  
+	        <div class="mui-content-padded " style="margin: 5px;">  
+			    <form class="mui-input-group" id="login-form">  
+			        <div class="mui-input-row login-row" >  
+			            <input type="text" id="phone" maxlength="20" value="" placeholder="请输入账号/手机号">  
+			        </div>  
+			        <div class="mui-input-row login-row">  			            
+			            <input type="password" id="password" maxlength="16" value=""  placeholder="请输入密码">  
+			        </div>  
+			    </form>  
+			</div>  
+			<div class="login-row clickBut" style="background: #60d7e3;"> 
+			    <button class="mui-btn mui-btn-primary" style="background: none !important" id="btn-login">登录</button>  			    
+			</div> 
+			<div class="login-footer">
+				<a  id="btn-forgotpwd">忘记密码?</a>
+			</div>
+			<div class="login-phone">
+				<i class="icon iconfont">&#xe612;</i>
+				<span>
+					客服电话：888-888-8888
+				</span>
+			</div>
+	    </div> 
+	    <!--<div class="mui-bar mui-bar-tab" style="height:20px;line-height:20px;font-size:10px;text-align:center;">  
+                                  这是底部信息  
+    	</div> -->
+	</body>
+	<script type="text/javascript" src="../mui/js/mui.min.js"></script>
+	<script type="text/javascript" src="../libs/jquery.min.js" ></script>
+	<script type="text/javascript" src="../mui/js/muix.js" ></script>
+	<script type="text/javascript" src="../common/immersed.js" ></script>
+	<script type="text/javascript" src="../common/validator.js" ></script>
+	<script type="text/javascript" src="../common/cache.js" ></script>
+	<!--<script src="../libs/ems.js" data-main='./main.js'></script>-->
+	<script type="text/javascript" src="login.js" ></script>
+</html>

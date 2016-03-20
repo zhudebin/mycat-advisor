@@ -1,0 +1,283 @@
+.show_allDate {
+	background: #fff;
+	padding: 20px 10px 40px 10px;
+}
+
+.systemFoot_box {
+	line-height: 3;
+	clear: both;
+	font-size: 14px;
+	text-align: center;
+	color: #bebebe;
+	padding: 10px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.oranger_module {
+	background: #ecb339;
+	color: #fff;
+	padding: 2px 5px;
+	margin-right: 5px;
+}
+
+.top_title {
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+/*.top_title p:first-child {
+	margin-right: -20px;
+}
+
+.top_title p:nth-child(2) {
+	text-align: right;
+}*/
+
+.date_list {
+	color: #6a6a6a;
+}
+
+.details_numberBox p {
+	color: #6a6a6a;
+}
+
+.but_box {
+	margin-top: 30px;
+	padding: 0 20px;
+}
+
+.but_box button {
+	border: #39c5d4 1px solid;
+	color: #39c5d4;
+	padding: 10px 0;
+}
+
+.but_box button:active {
+	background-color: #39c5d4 !important;
+}
+
+.details_numberBox .date_p span {
+	font-size: 22px;
+	line-height: 1.8;
+}
+
+.show_allDate .details_numberBox b.middel_hr {
+	margin-top: 5px;
+	height: 55px;
+	border-right: 1px solid #e1e1e1;
+}
+
+
+/*系统设置*/
+
+.system_list {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.two_system_list {
+	margin-top: 10px;
+}
+
+.margin_right20 {
+	margin-right: 20px;
+	font-style: normal;
+}
+
+.mui-content > .mui-table-view:first-child {
+	margin-top: 0;
+}
+
+.mui-table-view-cell::after {
+	left: 40px;
+}
+
+.mui-table-view-cell {
+	padding: 14px 15px;
+}
+
+.mui-table-view-cell > a:not(.mui-btn) {
+	margin: -14px -15px;
+}
+
+.mui-table-view .mui-table-view-cell a {
+	color: #6A6A6A;
+	font-size: 16px;
+}
+
+.mui-table-view .mui-table-view-cell a i.iconfont {
+	font-size: 22px;
+	color: #39c5d4;
+	margin-right: 5px;
+}
+
+.mui-table-view-cell a.message_notice i.iconfont {
+	margin-right: 5px;
+}
+
+.exit_login .mui-navigate-right:after {
+	right: 15px;
+	content: '';
+}
+
+
+/*消息通知*/
+
+.notice_list {
+	margin: 0px;
+	padding: 0px;
+	background: #fff;
+	padding: 0px 10px;
+	color: #6A6A6A;
+}
+
+.white_back {
+	background: #fff;
+}
+
+.notice_list li {
+	padding: 15px 0px;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+.mui-switch.mui-active {
+	border-color: #39c5d4;
+	background-color: #39c5d4;
+}
+
+.mui-switch-mini {
+	width: 47px;
+}
+
+.p_lastShow {
+	color: #c3c3c3;
+	padding: 0px;
+	margin: 0;
+	margin-top: 10px;
+	display: block;
+}
+
+
+/*关于群蜂*/
+
+.padding_set {
+	margin-top: 24px;
+	background: #fff;
+	padding: 0px 20px 40px 20px;
+}
+
+.padding_set2 {
+	margin-top: 0px;
+	background: #fff;
+	padding: 0px 20px 40px 20px;
+}
+
+.top_contentTitel {
+	border-bottom: #f7ebd1 2px solid;
+}
+
+.tow_btn p {
+	border: 1px solid #39c5d4;
+	margin: 30px 0;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #39c5d4;
+	font-size: 16px;
+}
+
+.tow_btn p.active {
+	color: #fff;
+	background: #39c5d4;
+}
+
+.tow_btn p:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 0px;
+}
+
+.tow_btn p:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.title_p {
+	text-align: right;
+	padding-top: 20px;
+	margin: 0px;
+	color: #ecb339;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-left: 5px;
+	overflow: hidden;
+}
+
+.content_pAll {
+	padding: 15px 0px 1px 0;
+}
+
+.content_pAll p {
+	line-height: 2.5;
+	border-bottom: 1px solid #f7ebd1;
+	padding-bottom: 10px;
+	display: inline;
+}
+
+.sever_box {
+	padding: 20px 0 0 0;
+	border-top: #f7ebd1 2px solid;
+}
+
+.sever_box li {
+	text-align: center;
+	border-right: 1px dashed #d8d8d8;
+	padding: 0 5px;
+}
+
+.sever_box li:last-child {
+	border-right: 0;
+}
+
+.sever_box li p,
+.sever_box li a {
+	color: #aaa9a9;
+	font-size: 16px;
+	line-height: 1;
+	word-wrap: break-word;
+}
+
+.sever_box li p i.iconfont {
+	font-size: 38px;
+}
+
+.gray_tilte {
+	margin: 0px;
+	padding: 20px;
+	color: #6a6a6a;
+	border-bottom: 1px solid #E1E1E1;
+	font-size: 16px;
+}
+
+.gray_btn {
+	background: #c0bfbf;
+	color: #fff;
+}
+
+.textarea_title {
+	color: #39c5d4;
+}
+
+.text_area textarea {
+	font-size: 14px;
+}
+
+.content_pAll p span {
+	padding: 0 10px;
+}
+
+.mui-btn-block {
+	padding: 10px 0;
+	font-size: 16px;
+}

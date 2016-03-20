@@ -1,0 +1,62 @@
+/*重构mui列表样式*/
+.mui-table-view-cell::after{
+	background-color: #eaeaea;
+}
+.mui-table-view-cell{
+	padding:15px;
+	color:#6a6a6a;
+	font-size: 15px;
+}
+.mui-table-view-cell > a:not(.mui-btn){
+	margin: -15px;
+}
+.mui-table-view-cell i.iconfont{
+	color:#39c5d4;
+	font-size: 19px;
+}
+.mui-table-view-cell span.mui-badge{
+	font-size: 14px;
+	color: #6a6a6a;
+}
+.mui-table-view-cell span.managerLogo{
+	display: inline-block !important;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	border-radius: 50%;
+	border: 1px solid #d5d5d5;
+	overflow: hidden !important;
+	background-clip:padding-box;
+}
+.mui-content > .mui-table-view:first-child{
+	margin-top: 0;
+}
+.mui-table-view::before,.mui-table-view::after{
+	background-color: #eaeaea;
+}
+.mui-input-row label{
+	font-size: 15px;
+	line-height: 2;
+	color: #666666;
+}
+.mui-input-group input{
+	height: 50px;
+	padding-right:30px;
+	font-size: 15px;
+	line-height: 24px;
+	color: #666666;
+}
+.mui-input-group .mui-input-row{
+	height: 50px;
+}
+.mui-input-row .mui-input-clear ~ .mui-icon-clear{
+	top: 14px;
+}
+.mui-input-group::before{
+	background-color: #ffffff;
+}
+.mui-input-group::after,.mui-input-group .mui-input-row::after{
+	background-color: #e1e1e1;
+}
+.manageDesc{ word-wrap: break-word;;}
+.manageDesc p{color: #6a6a6a; margin-top: 20px;}
