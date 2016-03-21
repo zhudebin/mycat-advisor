@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.SystemParam;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface SystemParamMapper {
-    int deleteByPrimaryKey(Long id);
+public interface SystemParamMapper extends MyMapper<SystemParam> {
 
-    int insert(SystemParam record);
-
-    int insertSelective(SystemParam record);
-
-    SystemParam selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SystemParam record);
-
-    int updateByPrimaryKey(SystemParam record);
 }

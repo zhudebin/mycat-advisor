@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
-import org.apache.mycat.advisor.persistence.model.AuthOne;
+import org.apache.mycat.advisor.persistence.model.Authone;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface AuthOneMapper {
-    int deleteByPrimaryKey(Long id);
+public interface AuthOneMapper extends MyMapper<Authone> {
 
-    int insert(AuthOne record);
-
-    int insertSelective(AuthOne record);
-
-    AuthOne selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(AuthOne record);
-
-    int updateByPrimaryKey(AuthOne record);
 }

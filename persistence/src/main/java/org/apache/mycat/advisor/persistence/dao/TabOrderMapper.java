@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabOrder;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabOrderMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabOrderMapper extends MyMapper<TabOrder> {
 
-    int insert(TabOrder record);
-
-    int insertSelective(TabOrder record);
-
-    TabOrder selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabOrder record);
-
-    int updateByPrimaryKey(TabOrder record);
 }

@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
-import org.apache.mycat.advisor.persistence.model.SensitiveWord;
+import org.apache.mycat.advisor.persistence.model.Sensitiveword;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface SensitiveWordMapper {
-    int deleteByPrimaryKey(Long id);
+public interface SensitiveWordMapper extends MyMapper<Sensitiveword> {
 
-    int insert(SensitiveWord record);
-
-    int insertSelective(SensitiveWord record);
-
-    SensitiveWord selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(SensitiveWord record);
-
-    int updateByPrimaryKey(SensitiveWord record);
 }

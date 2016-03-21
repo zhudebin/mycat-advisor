@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabUserLoginInfo;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabUserLoginInfoMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabUserLoginInfoMapper extends MyMapper<TabUserLoginInfo> {
 
-    int insert(TabUserLoginInfo record);
-
-    int insertSelective(TabUserLoginInfo record);
-
-    TabUserLoginInfo selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabUserLoginInfo record);
-
-    int updateByPrimaryKey(TabUserLoginInfo record);
 }

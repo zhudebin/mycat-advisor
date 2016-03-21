@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabPostInfo;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabPostInfoMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabPostInfoMapper  extends MyMapper<TabPostInfo> {
 
-    int insert(TabPostInfo record);
-
-    int insertSelective(TabPostInfo record);
-
-    TabPostInfo selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabPostInfo record);
-
-    int updateByPrimaryKey(TabPostInfo record);
 }

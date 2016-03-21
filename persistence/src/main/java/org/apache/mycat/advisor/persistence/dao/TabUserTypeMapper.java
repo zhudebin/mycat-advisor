@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabUserType;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabUserTypeMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabUserTypeMapper  extends MyMapper<TabUserType> {
 
-    int insert(TabUserType record);
-
-    int insertSelective(TabUserType record);
-
-    TabUserType selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabUserType record);
-
-    int updateByPrimaryKey(TabUserType record);
 }

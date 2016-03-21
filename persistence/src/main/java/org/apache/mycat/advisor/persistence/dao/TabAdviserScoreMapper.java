@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabAdviserScore;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabAdviserScoreMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabAdviserScoreMapper extends MyMapper<TabAdviserScore> {
 
-    int insert(TabAdviserScore record);
-
-    int insertSelective(TabAdviserScore record);
-
-    TabAdviserScore selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabAdviserScore record);
-
-    int updateByPrimaryKey(TabAdviserScore record);
 }

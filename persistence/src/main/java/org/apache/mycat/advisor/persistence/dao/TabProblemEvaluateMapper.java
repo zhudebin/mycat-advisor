@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabProblemEvaluate;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabProblemEvaluateMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabProblemEvaluateMapper  extends MyMapper<TabProblemEvaluate> {
 
-    int insert(TabProblemEvaluate record);
-
-    int insertSelective(TabProblemEvaluate record);
-
-    TabProblemEvaluate selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabProblemEvaluate record);
-
-    int updateByPrimaryKey(TabProblemEvaluate record);
 }

@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabCompany;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabCompanyMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabCompanyMapper extends MyMapper<TabCompany> {
 
-    int insert(TabCompany record);
-
-    int insertSelective(TabCompany record);
-
-    TabCompany selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabCompany record);
-
-    int updateByPrimaryKey(TabCompany record);
 }

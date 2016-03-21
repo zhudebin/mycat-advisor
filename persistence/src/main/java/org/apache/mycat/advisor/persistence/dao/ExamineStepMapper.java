@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.ExamineStep;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface ExamineStepMapper {
-    int deleteByPrimaryKey(Long examineid);
+public interface ExamineStepMapper extends MyMapper<ExamineStep> {
 
-    int insert(ExamineStep record);
-
-    int insertSelective(ExamineStep record);
-
-    ExamineStep selectByPrimaryKey(Long examineid);
-
-    int updateByPrimaryKeySelective(ExamineStep record);
-
-    int updateByPrimaryKey(ExamineStep record);
 }

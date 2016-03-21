@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
-import org.apache.mycat.advisor.persistence.model.TabVipBuyInfo;
+import org.apache.mycat.advisor.persistence.model.TabVipBuyinfo;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabVipBuyInfoMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabVipBuyInfoMapper extends MyMapper<TabVipBuyinfo> {
 
-    int insert(TabVipBuyInfo record);
-
-    int insertSelective(TabVipBuyInfo record);
-
-    TabVipBuyInfo selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabVipBuyInfo record);
-
-    int updateByPrimaryKey(TabVipBuyInfo record);
 }

@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.ExamineOperate;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface ExamineOperateMapper {
-    int deleteByPrimaryKey(Long examineid);
+public interface ExamineOperateMapper extends MyMapper<ExamineOperate> {
 
-    int insert(ExamineOperate record);
-
-    int insertSelective(ExamineOperate record);
-
-    ExamineOperate selectByPrimaryKey(Long examineid);
-
-    int updateByPrimaryKeySelective(ExamineOperate record);
-
-    int updateByPrimaryKey(ExamineOperate record);
 }

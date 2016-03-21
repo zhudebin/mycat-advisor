@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
-import org.apache.mycat.advisor.persistence.model.AuthMethod;
+import org.apache.mycat.advisor.persistence.model.Authmethod;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface AuthMethodMapper {
-    int deleteByPrimaryKey(Long id);
+public interface AuthMethodMapper extends MyMapper<Authmethod> {
 
-    int insert(AuthMethod record);
-
-    int insertSelective(AuthMethod record);
-
-    AuthMethod selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(AuthMethod record);
-
-    int updateByPrimaryKey(AuthMethod record);
 }

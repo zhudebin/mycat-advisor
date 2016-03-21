@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
-import org.apache.mycat.advisor.persistence.model.ExamineTemplet;
+import org.apache.mycat.advisor.persistence.model.Examinetemplet;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface ExamineTempletMapper {
-    int deleteByPrimaryKey(Integer templateid);
+public interface ExamineTempletMapper extends MyMapper<Examinetemplet> {
 
-    int insert(ExamineTemplet record);
-
-    int insertSelective(ExamineTemplet record);
-
-    ExamineTemplet selectByPrimaryKey(Integer templateid);
-
-    int updateByPrimaryKeySelective(ExamineTemplet record);
-
-    int updateByPrimaryKey(ExamineTemplet record);
 }

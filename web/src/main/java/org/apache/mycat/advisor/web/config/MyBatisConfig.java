@@ -1,5 +1,7 @@
 package org.apache.mycat.advisor.web.config;
 
+import com.github.pagehelper.PageHelper;
+import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -16,6 +18,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
 import javax.sql.DataSource;
+import java.util.Properties;
 
 /**
  * package: springboot.simple.config <br/>
@@ -32,18 +35,30 @@ public class MyBatisConfig implements TransactionManagementConfigurer{
     DataSource dataSource;
 
     @Bean(name = "sqlSessionFactory")
-    public SqlSessionFactory sqlSessionFactoryBean(){
-        SqlSessionFactoryBean bean=new SqlSessionFactoryBean();
+    public SqlSessionFactory sqlSessionFactoryBean() {
+        SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        //设置扫描实体文件的位置
         bean.setTypeAliasesPackage("org.apache.mycat.advisor.persistence.model");
-        //扫描xml文件
+
+        //分页插件
+        PageHelper pageHelper = new PageHelper();
+        Properties properties = new Properties();
+        properties.setProperty("reasonable", "true");
+        properties.setProperty("supportMethodsArguments", "true");
+        properties.setProperty("returnPageInfo", "check");
+        properties.setProperty("params", "count=countSql");
+        pageHelper.setProperties(properties);
+
+        //添加插件
+        bean.setPlugins(new Interceptor[]{pageHelper});
+
+        //添加XML目录
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         try {
-            bean.setMapperLocations(resolver.getResources("classpath*:**/*Mapper.xml"));
+            bean.setMapperLocations(resolver.getResources("classpath*:**/mapper/*Mapper.xml"));
             return bean.getObject();
         } catch (Exception e) {
-            log.error("自动扫描MyBatis映射XML文件失败！",e);
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }

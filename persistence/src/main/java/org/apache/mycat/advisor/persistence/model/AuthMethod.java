@@ -1,22 +1,24 @@
 package org.apache.mycat.advisor.persistence.model;
 
-import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Id;
+import java.sql.Timestamp;
 
-public class AuthMethod {
+/**
+ * Created by cjl on 2016/3/20.
+ */
+public class Authmethod {
     private Long id;
-
     private Long userId;
-
     private String logintype;
-
     private String loginname;
-
     private String encrypttype;
-
     private Byte enable;
+    private Timestamp lastupdatedate;
 
-    private Date lastupdatedate;
-
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public Long getId() {
         return id;
     }
@@ -25,6 +27,8 @@ public class AuthMethod {
         this.id = id;
     }
 
+    @Basic
+    @Column(name = "user_id", nullable = true, insertable = true, updatable = true)
     public Long getUserId() {
         return userId;
     }
@@ -33,6 +37,8 @@ public class AuthMethod {
         this.userId = userId;
     }
 
+    @Basic
+    @Column(name = "logintype", nullable = true, insertable = true, updatable = true, length = 2)
     public String getLogintype() {
         return logintype;
     }
@@ -41,6 +47,8 @@ public class AuthMethod {
         this.logintype = logintype;
     }
 
+    @Basic
+    @Column(name = "loginname", nullable = true, insertable = true, updatable = true, length = 64)
     public String getLoginname() {
         return loginname;
     }
@@ -49,6 +57,8 @@ public class AuthMethod {
         this.loginname = loginname;
     }
 
+    @Basic
+    @Column(name = "encrypttype", nullable = true, insertable = true, updatable = true, length = 2)
     public String getEncrypttype() {
         return encrypttype;
     }
@@ -57,6 +67,8 @@ public class AuthMethod {
         this.encrypttype = encrypttype;
     }
 
+    @Basic
+    @Column(name = "enable", nullable = true, insertable = true, updatable = true)
     public Byte getEnable() {
         return enable;
     }
@@ -65,11 +77,44 @@ public class AuthMethod {
         this.enable = enable;
     }
 
-    public Date getLastupdatedate() {
+    @Basic
+    @Column(name = "lastupdatedate", nullable = false, insertable = true, updatable = true)
+    public Timestamp getLastupdatedate() {
         return lastupdatedate;
     }
 
-    public void setLastupdatedate(Date lastupdatedate) {
+    public void setLastupdatedate(Timestamp lastupdatedate) {
         this.lastupdatedate = lastupdatedate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Authmethod that = (Authmethod) o;
+
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
+        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+        if (logintype != null ? !logintype.equals(that.logintype) : that.logintype != null) return false;
+        if (loginname != null ? !loginname.equals(that.loginname) : that.loginname != null) return false;
+        if (encrypttype != null ? !encrypttype.equals(that.encrypttype) : that.encrypttype != null) return false;
+        if (enable != null ? !enable.equals(that.enable) : that.enable != null) return false;
+        if (lastupdatedate != null ? !lastupdatedate.equals(that.lastupdatedate) : that.lastupdatedate != null)
+            return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id != null ? id.hashCode() : 0;
+        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        result = 31 * result + (logintype != null ? logintype.hashCode() : 0);
+        result = 31 * result + (loginname != null ? loginname.hashCode() : 0);
+        result = 31 * result + (encrypttype != null ? encrypttype.hashCode() : 0);
+        result = 31 * result + (enable != null ? enable.hashCode() : 0);
+        result = 31 * result + (lastupdatedate != null ? lastupdatedate.hashCode() : 0);
+        return result;
     }
 }

@@ -1,18 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.ExaminePerson;
-import org.apache.mycat.advisor.persistence.model.ExaminePersonKey;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface ExaminePersonMapper {
-    int deleteByPrimaryKey(ExaminePersonKey key);
+public interface ExaminePersonMapper extends MyMapper<ExaminePerson> {
 
-    int insert(ExaminePerson record);
-
-    int insertSelective(ExaminePerson record);
-
-    ExaminePerson selectByPrimaryKey(ExaminePersonKey key);
-
-    int updateByPrimaryKeySelective(ExaminePerson record);
-
-    int updateByPrimaryKey(ExaminePerson record);
 }

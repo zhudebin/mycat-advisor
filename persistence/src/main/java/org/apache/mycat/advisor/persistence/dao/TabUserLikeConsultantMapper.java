@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.TabUserLikeConsultant;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface TabUserLikeConsultantMapper {
-    int deleteByPrimaryKey(Long id);
+public interface TabUserLikeConsultantMapper extends MyMapper<TabUserLikeConsultant> {
 
-    int insert(TabUserLikeConsultant record);
-
-    int insertSelective(TabUserLikeConsultant record);
-
-    TabUserLikeConsultant selectByPrimaryKey(Long id);
-
-    int updateByPrimaryKeySelective(TabUserLikeConsultant record);
-
-    int updateByPrimaryKey(TabUserLikeConsultant record);
 }

@@ -1,17 +1,8 @@
 package org.apache.mycat.advisor.persistence.dao;
 
 import org.apache.mycat.advisor.persistence.model.PayFlow;
+import org.apache.mycat.advisor.persistence.util.MyMapper;
 
-public interface PayFlowMapper {
-    int deleteByPrimaryKey(Long serialno);
+public interface PayFlowMapper extends MyMapper<PayFlow> {
 
-    int insert(PayFlow record);
-
-    int insertSelective(PayFlow record);
-
-    PayFlow selectByPrimaryKey(Long serialno);
-
-    int updateByPrimaryKeySelective(PayFlow record);
-
-    int updateByPrimaryKey(PayFlow record);
 }
