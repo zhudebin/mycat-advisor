@@ -1,0 +1,322 @@
+/*订单管理*/
+.order_class{
+	margin: 0px;
+	background-color: #fff;
+}
+.order_class p{
+	margin: 0px;
+	text-align: center;
+    line-height: 50px;
+}
+.order_class p.active{
+	border-bottom: 2px solid #39c5d4;
+}
+.one_orderBox{
+	margin-top: 10px;
+	border: 1px solid #e1e1e1;
+	padding-top: 15px;
+	border-left: 0px;border-right: 0px;
+	background-color: #FFF;
+}
+.one_orderBox p.order_date{
+	padding:0px 15px;
+	color: #bebebe;
+	margin: 0px;
+}
+.d_container {
+	padding: 10px 0 20px 0;
+}
+.d_container .list_middel{
+	margin-right: 10px;
+}
+.d_container p{
+	margin: 0px;
+	padding: 0px;
+	line-height: 30px;
+
+}
+i{
+	font-style:normal ;
+}
+.class_incon{
+	padding:0 10px;
+}
+.class_incon i{
+	font-size: 60px;
+	line-height: 1;
+}
+.class_incon i.no_settlement,.class_incon i.withdrawal_ing{
+	color: #6ab1d9;
+}
+.yes_settlement,.withdrawal_success{
+	color: #80d989;
+}
+.fail_settlement{
+	color: #fe5f5f;
+}
+.big_number{
+	color: #fdaf53;
+	font-size: 24px;
+}
+.number_price {
+	padding-right: 10px;
+	text-align: right;
+}
+.number_price .big_number i{
+	font-size: 16px;
+	font-style: normal;
+}
+.blue_font{
+	color: #39c5d4;
+	margin-right: 2px;
+}
+.old_number{
+	color: #bebebe;
+}
+.old_number span{
+	text-decoration: line-through;
+	font-size: 13px;
+}
+.old_number font{
+	font-size: 10px;
+}
+
+/*订单详情*/
+.details_topC{
+	padding: 40px 0;
+	text-align: center;
+	background-color: #fff;
+	border-bottom: 1px solid #e1e1e1;
+}
+.instructions_d{
+	font-weight: none;
+	color: #6a6a6a;
+	font-size: 18px;
+}
+.details_munber{
+    color: #39c5d4;
+    font-size: 45px;
+    line-height:1.5 ;
+}
+.details_munber span{
+	    position: relative;
+	    text-align: center;
+	    display: inline-block;
+	    min-width: 120px;
+}
+.details_munber span.details_munber_only{
+	 position: static!important;
+	    text-align: center;
+	    display: inline-block;
+	    min-width: 120px;
+}
+.details_numberBox {
+	padding-top: 30px;
+}
+.details_numberBox p{
+	color: #ababab;
+	font-size: 12px;
+}
+.details_numberBox p span{
+	color: #39c5d4;
+	font-size: 15px;
+}
+.details_numberBox b.middel_hr{
+	margin-top: 5px;
+	height:45px;
+	border-right: 1px solid #e1e1e1;
+}
+.overflow_ellipsis{
+		text-overflow: ellipsis;
+		white-space: nowrap;
+        overflow: hidden;
+}
+.settlement_marriedIcon{
+	height: 92px;
+    display: block;
+    width: 92px;
+    position: absolute;
+    top: -10px;
+    right: -42%;
+    z-index: 9;
+	
+	
+}
+.details_munber span.details_munber_only .settlement_marriedIcon{	
+	    height: 92px;
+    display: block;
+    width: 92px;
+    position: absolute;
+    top: 60px;
+    right: 5%;
+    z-index: 9;
+}
+
+@media only screen and (max-width: 350px) {
+	.settlement_marriedIcon{
+	height: 92px;
+	display: block;
+	width: 92px;
+	position: absolute;
+	top: -30px;
+	right: -35%;
+}
+}
+.settlementNo_de{
+	background: url("../images/audit_incon.png") no-repeat -4px -1px;
+	background-size: 300px auto;
+}
+.settlementNo_success{
+	background: url("../images/audit_incon.png") no-repeat -203px -2px;
+	background-size: 300px auto;
+}
+.settlementNo_failure{
+	background: url("../images/audit_incon.png") no-repeat -104px -2px;
+	background-size: 300px auto;
+}
+.border_tow{
+		border: 1px solid #e1e1e1;
+		border-left:0px;border-right: 0px;
+}
+.details_listCentent{
+	margin-top:10px;
+	background-color: #fff;
+}
+.details_list,.details_list li,.details_list span,.details_list p{
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+.details_list{
+	padding: 0px 10px;
+}
+.details_list li{
+	padding: 25px 0px;
+   border-bottom: 1px solid #e1e1e1;
+}
+.details_list li:last-child{
+	border:none;
+}
+.reason_failure{
+	padding: 20px 10px;
+	border-top: 1px solid #e1e1e1;
+}
+.reason_failure p{
+	margin-top: 20px;
+	font-size: 12px;
+	line-height: 1.4;
+}
+.details_list,.reason_failure{
+	color:#6a6a6a;
+}
+.details_list li{
+	font-size: 15px;
+}
+.reason_failure h4{
+	font-size: 15px;
+
+}
+.reason_failure p{
+	font-size: 12px;
+}
+.earnings_show{
+	border-top:1px solid #e1e1e1;
+}
+.earnings_show {
+	padding:20px 15px 0;
+	width: auto;
+}
+.earnings_show .left_show,.earnings_show .right_show{
+	width: 100%;
+	border: 1px solid #E1E1E1;
+    padding: 20px 30px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+/*.earnings_show .right_show{
+	border-left:0px;
+}*/
+.earnings_show .left_show{
+	position: relative;
+}
+.left_topIcon{
+	/*position: absolute;
+	top: 0px;
+	left: 0px;
+	height:80px;
+    width: 80px;
+	background: url("../images/earnings_leftTop.png") no-repeat;*/
+	display: block;
+	width: 80px;
+	height: 25px;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	background: #39c5d4;
+	left: -22px;
+	top: 6px;
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+}
+
+.earnings_show .left_show h4,.earnings_show .right_show h4{
+	font-size: 18px;
+}
+.nuber_earnings{
+	color: #ed943c; 
+	font-size: 30px;
+	line-height: 1.5;
+}
+.min_font{
+	font-size: 12px;
+}
+.earnings_show .left_show p,.earnings_show .right_show p{
+	margin: 0px;
+	padding: 0px;
+}
+.foot_box{
+     line-height: 3;
+	   clear: both;
+	   font-size: 14px ;
+	   text-align: center;
+	   color: #bebebe;
+	   padding: 0px 12px 20px 12px;
+}
+.foot_box .hr_cross{
+	width: 50px;
+	display: block;
+	border-top: 1px solid #bebebe;
+}
+
+/*重构mui.css*/
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+	width: 100%;
+	background-color: #ffffff;
+}
+.mui-segmented-control.mui-scroll-wrapper{
+	height: 40px;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	border-bottom: 2px solid #39c5d4 !important;
+	color: #39c5d4;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+	width: 54%;
+	color: #6a6a6a;
+	font-size: 15px;
+	padding: 0 15px;
+}
+.mui-segmented-control .mui-control-item{
+	height: 40px;
+	line-height: 40px;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+	border: none;
+}

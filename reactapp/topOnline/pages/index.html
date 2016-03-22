@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+   
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/iconfont.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    
+    <style type="text/css">
+		.mui-bar-nav~.mui-content{ padding-top: 242px;}
+		.mui-popover {
+			height: 200px;
+		}
+		.mui-content {
+			padding: 10px;
+		}
+		.index_middel{
+			margin:0 -10px;
+		}
+    </style>
+</head>
+<body>
+<header id="header" class="mui-bar mui-bar-nav header-bar">
+	<div class="mui-icon mui-pull-left" id="link-userinfo">
+		<span class="logo_img">
+			<img src="../images/default_logo.png" width="33" height="33" id="logo-merchant" />
+		</span>
+	</div>
+	<a class="mui-icon  mui-pull-right" id="link-order">
+		<span>订单</span>
+	</a>
+    <h1 class="mui-title" id="name-merchant">12111</h1>
+    <div class="index_middel">
+	     <h1 class="center_he">今日收益额(元)</h1>
+	     <h1 class="center_number" id="price-today">0.00</h1>
+	     <div class="number_box d_box">
+	     	<p class="date_p d_flex">交易额(元)<span id="price-total">0.00</span></p>
+	     	<b class="middel_hr"></b>
+            <p class="date_p d_flex">交易量(笔)<span id="count-totaltrade">0</span></p>
+	     </div>
+	</div> 
+</header>
+<div class="mui-content">
+	<div class="mui-scroll-wrapper" id="wrapper" style="top:242px;">
+		<div class="mui-scroll">
+			<!-- 消息队列 -->
+			<div class="scrolling_news display_none">
+				<i class="iconfont f_l index_horn">&#xe614</i>
+			   	<div id="list-message">
+			    </div>
+			</div>
+		    <!--菜单-->
+		    <script id="tp-menu" type="text/template">
+		    	<% for(var i in $$){%>
+		    		<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+		    			<a data-menuid="<%= $$[i].menuSeq %>" data-url="<%= $$[i].menuUrl %>" href="javascript:;">
+		    				<i class="iconfont mui-icon  <%= $$[i].menuIcon %>" id="<%= $$[i].menuIcon %>" name="<%= $$[i].menuIcon %>"></i>
+			            	<div class="mui-media-body"><%= $$[i].menuName %></div>
+		    			</a>
+		        	</li>
+		    	<% } %>
+		    </script>
+		   <ul class="mui-table-view mui-grid-view mui-grid-9" id="list-menu">
+		   		
+		   </ul>
+		  
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../mui/js/mui.min.js"></script>
+<script src="../mui/js/mui.picker.min.js"></script>
+<script type="text/javascript" src="../mui/js/muix.js" ></script>
+<script type="text/javascript" src="../libs/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../common/immersed.js" ></script>
+<script type="text/javascript" src="../libs/tp.js"></script>
+<script type="text/javascript" src="../libs/utils.js"></script>
+<script type="text/javascript" src="../common/cache.js" ></script>
+<script src="../libs/ems.js" data-main='./index.js'></script>
+<script>
+	mui.init();
+	if (mui.os.android) {
+		$(".logo_img").css("line-height","30px");
+	}
+	
+</script>
