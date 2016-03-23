@@ -30,6 +30,7 @@ public class UserCompanyServiceImpl extends BaseServiceImpl<TabCompany> implemen
             o.setUpdateTime(new Date());
             return super.update(o);
         }
+        o.setDelFlag(0);
         o.setInsertTime(new Date());
         o.setUpdateTime(new Date());
         return super.save(o);

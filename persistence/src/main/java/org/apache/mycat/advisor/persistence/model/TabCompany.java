@@ -29,7 +29,7 @@ public class TabCompany {
     /**
      * 创建时间
      */
-    private Date createDate;
+    private String createDate;
     /**
      * 是否上市  1：上市，0：没上市
      */
@@ -104,11 +104,11 @@ public class TabCompany {
 
     @Basic
     @Column(name = "create_date", nullable = true, insertable = true, updatable = true)
-    public Date getCreateDate() {
+    public String getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+    public void setCreateDate(String createDate) {
         this.createDate = createDate;
     }
 

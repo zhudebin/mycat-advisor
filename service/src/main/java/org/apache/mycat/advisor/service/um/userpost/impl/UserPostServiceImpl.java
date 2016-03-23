@@ -38,6 +38,10 @@ public class UserPostServiceImpl extends BaseServiceImpl<TabPostInfo> implements
             o.setUpdateTime(new Date());
             return super.update(o);
         }
+        o.setStatus(1);
+        o.setDelFlag(0);
+        o.setUpdateTime(new Date());
+        o.setInsertTime(new Date());
         return super.save(o);
     }
 }

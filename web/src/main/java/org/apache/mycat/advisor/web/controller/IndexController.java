@@ -53,7 +53,7 @@ public class IndexController {
     @RequestMapping(value = "doLogin", method = RequestMethod.POST)
     @ResponseBody
     public Map<String,Object> doLogin(HttpServletRequest request,@RequestParam Map<String,String> param) {
-        Map<String, Object> data = new HashMap<>();
+        Map<String, Object> data = new HashMap<String, Object>();
         TabUserInfo userInfo = userInfoService.findUserByUsername(param.get("username"));
         String password = param.get("password");
         if (userInfo != null && userInfo.getPassword().equals(password)) {
