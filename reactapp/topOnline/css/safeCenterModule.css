@@ -1,0 +1,135 @@
+.phone_testBox {
+	position: relative;
+	padding-top: 25px;
+	text-align: center;
+}
+
+.top_binding {
+	display: block;
+	position: absolute;
+	top: -40px;
+	right: -50px;
+	background: url("../images/binding_logo.png") no-repeat;
+	background-size: 150px auto;
+	width: 170px;
+	height: 150px;
+}
+
+@media (max-width: 380px) {
+	.top_binding {
+		display: block;
+		position: absolute;
+		top: -35px;
+		right: -50px;
+		background: url("../images/binding_logo.png") no-repeat;
+		background-size: 130px auto;
+		width: 150px;
+		height: 130px;
+	}
+}
+
+.phone_testBox .phone_icon {
+	text-align: center;
+}
+
+.phone_testBox .phone_icon i.iconfont {
+	color: #39c5d4;
+}
+
+.phone_number {
+	color: #39C5D4;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+}
+
+.success_bindingBtn button {
+	background: #39C5D4;
+	border: 1px solid #39C5D4;
+}
+
+.phone_testBox .phone_icon i {
+	font-size: 80px;
+	line-height: 1.5;
+	color: #abacac;
+}
+
+.title_schedule {
+	width: 100%;
+	line-height: 3;
+	padding: 0 20px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.success_tick {
+	font-size: 80px;
+	line-height: 1.5;
+}
+
+.binding_ol li {
+	margin-bottom: 10px;
+	list-style: decimal!important;
+	font-size: 14px;
+	padding-right: 10px;
+}
+
+.last_foot {
+	color: #6a6a6a;
+}
+
+.last_foot ol li{
+	color: #bebebe;
+}
+
+.phone_testBox .phone_icon i.tick_green,
+.tick_green {
+	color: #66cc22;
+}
+
+.phone_testBox h4.show_phoneNumber {
+	color: #6A6A6A;
+	line-height: 1.5;
+}
+
+.phone_testBox p.waek_gray {
+	color: #bebebe;
+	margin-bottom: 20px;
+}
+
+.phone_testBox p i.noTick_red {
+	color: #cc3333 !important;
+	font-size: 100px;
+}
+
+.warning_huan {
+	color: #f1d82f;
+	margin-right: 5px;
+}
+
+.list_styleNO li {
+	list-style: none!important;
+}
+
+.success_updeatebP {
+	text-align: center;
+	padding: 30px;
+}
+
+.success_updeatebP h4 {
+	color: #6A6A6A;
+}
+
+.mui-input-row label {
+	line-height: 5;
+	width: 70px;
+	min-width: 70px;
+	width: auto;
+	padding: 10px 0 10px 0;
+	color: #ccc;
+	font-size: 14px;
+}
+
+.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-speech~.mui-icon-speech{
+	/*right: 0;*/
+	left: inherit;
+}

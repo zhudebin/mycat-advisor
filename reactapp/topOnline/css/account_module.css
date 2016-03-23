@@ -1,0 +1,221 @@
+/*账单管理*/
+
+.topBtn_content {
+	padding: 30px 10px;
+}
+
+.topBtn_content button {
+	margin: 0px;
+	padding: 35px 0;
+	font-size: 25px;
+	border: 1px dashed #39c5d4;
+	color: #848484;
+}
+
+.color_6a {
+	color: #6a6a6a;
+}
+
+.color_blue {
+	color: #39c5d4;
+}
+
+.account_instructions .color_blue {
+	padding: 20px 30px 15px 20px;
+}
+
+.instructions_list li {
+	margin-bottom: 30px;
+	font-size: 14px;
+	padding-right: 10px;
+	color: #848484;
+}
+
+.instructions_list li p {
+	color: #bebebe;
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+
+/*新建账单管理*/
+
+.account_details {
+	margin: 0px;
+	padding: 0px;
+}
+
+.account_details li {
+	list-style: none;
+}
+
+.account_details li:active {
+	background-color: #eee;
+}
+
+.list_contentAcc {
+	list-style: none;
+	padding: 15px 5px 15px 10px;
+}
+
+.head_logoColor {
+	color: #b5eef4;
+	font-size: 45px;
+}
+
+.list_middelAcc {
+	padding-left: 20px;
+}
+
+.list_middelAcc p {
+	margin: 0;
+	line-height: 1.8;
+}
+
+.iconForward_box {
+	line-height: 3;
+	color: #d9d9d9;
+	text-align: right;
+}
+
+
+/*账单管理详情页*/
+
+.account_Managerdetails,
+.account_new,
+.accountNew_Managerdetails {
+	list-style: none;
+	margin: 0px;
+	padding: 0px 10px;
+	color: #6a6a6a;
+	border: 0px;
+}
+
+.account_Managerdetails li,
+.account_new li,
+.accountNew_Managerdetails li {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	line-height: 4;
+	color: #6a6a6a;
+}
+
+.account_Managerdetails li p,
+.account_new li p,
+.accountNew_Managerdetails li p {
+	padding: 0px;
+	margin: 0px;
+}
+.accountNew_Managerdetails ul li p.checkTitle{
+	padding-right: 5px;
+}
+.bor_bottom {
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.ul_second li:first-child {
+	border: 0px;
+}
+
+.ul_second li {
+	border-top: 1px solid #e1e1e1;
+}
+
+.mui-checkbox input[type=checkbox],
+.mui-radio input[type=radio] {
+	position: absolute;
+	top: 15px;
+	right: 5px;
+	display: inline-block;
+	width: 28px;
+	height: 26px;
+	border: 0;
+	outline: 0!important;
+	background-color: transparent;
+	-webkit-appearance: none;
+}
+
+.mui-checkbox input[type=checkbox]:checked:before,
+.mui-radio input[type=radio]:checked:before {
+	color: #39c5d4;
+}
+
+.mui-input-group:before {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	-webkit-appearance: none;
+	height: auto!important;
+	content: '';
+	-webkit-transform: none;
+	transform: none;
+	background-color: #fff;
+}
+
+.mui-input-group:after {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	-webkit-appearance: none;
+	height: auto!important;
+	content: '';
+	-webkit-transform: none;
+	transform: none;
+	background-color: #fff;
+}
+
+.input_details input {
+	border: 0px;
+	color: #6a6a6a;
+}
+
+
+/*账单编辑*/
+
+li .only_style .mui-checkbox input[type=checkbox],
+li .only_style .mui-radio input[type=radio] {
+	position: absolute;
+	top: 15px;
+	left: 0px;
+}
+
+li .only_style p span {
+	margin-left: 30px;
+}
+
+.accountNew_Managerdetails {
+	padding-bottom: 40px;
+}
+
+.error_prompt p:first-child {
+	color: #2AB9C8;
+	margin-top: 2px;
+}
+
+.account_new input {
+	font-size: 14px;
+	margin: 0px;
+}
+
+.error_icon {
+	color: #bebebe;
+	display: none;
+}
+
+.error_prompt .error_icon {
+	display: block;
+}
+
+.input_details p:first-child {
+	margin-top: 2px;
+}
+
+.head_logo {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	overflow: hidden;
+}
