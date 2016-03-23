@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 /**
  * Created by cjl on 2016/3/20.
  */
-public class Authmethod {
+public class AuthMethod {
     private Long id;
     private Long userId;
     private String logintype;
@@ -92,7 +92,7 @@ public class Authmethod {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Authmethod that = (Authmethod) o;
+        AuthMethod that = (AuthMethod) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;

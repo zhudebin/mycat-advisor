@@ -10,7 +10,7 @@ import java.sql.Timestamp;
  * Created by cjl on 2016/3/20.
  */
 @Table(name = "tab_vip_buyinfo", schema = "", catalog = "mycat_advisor")
-public class TabVipBuyinfo {
+public class TabVipBuyInfo {
     private Long id;
     private Long userId;
     private Timestamp buyTime;
@@ -105,7 +105,7 @@ public class TabVipBuyinfo {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TabVipBuyinfo that = (TabVipBuyinfo) o;
+        TabVipBuyInfo that = (TabVipBuyInfo) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;

@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 /**
  * Created by cjl on 2016/3/20.
  */
-public class Examinetemplet {
+public class ExamineTemplet {
     private Integer templateid;
     private String examinetype;
     private String url;
@@ -70,7 +70,7 @@ public class Examinetemplet {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Examinetemplet that = (Examinetemplet) o;
+        ExamineTemplet that = (ExamineTemplet) o;
 
         if (templateid != null ? !templateid.equals(that.templateid) : that.templateid != null) return false;
         if (examinetype != null ? !examinetype.equals(that.examinetype) : that.examinetype != null) return false;
