@@ -1,0 +1,179 @@
+
+.one_withdrawalBox{
+	margin-top: 10px;
+	border: 1px solid #e1e1e1;
+	padding-top: 15px;
+	border-left: 0px;border-right: 0px;
+	background-color: #FFF;
+}
+.one_withdrawalBox p.order_date{
+	padding:0px 15px;
+	color: #bebebe;
+	margin: 0px;
+}
+.one_withdrawalBox .list_middel{
+	color: #666;
+}
+.one_withdrawalBox .number_price{
+	text-align: right;
+}
+.one_withdrawalBox .number_price p.text_tiShi{
+	color: #fdaf53;
+}
+.withdrawal_failure{
+	color:#fe5f5f;
+}
+.earnings_show{
+	border-top:1px solid #e1e1e1;
+}
+.withdrawal_marriedIcon{
+	height: 95px;
+	display: block;
+	width: 95px;
+	position: absolute;
+	top: -30px;
+	right: -50%;
+}
+@media only screen and (max-width: 350px) {
+	.withdrawal_marriedIcon{
+	height: 95px;
+	display: block;
+	width: 95px;
+	position: absolute;
+	top: -30px;
+	right: -35%;
+ }
+}
+.withdrawalDe_failure{
+	background: url("../images/money_incon.png") no-repeat -5px -3px;
+	background-size: 300px auto;
+}
+.withdrawalDe_success{
+	background: url("../images/money_incon.png") no-repeat  -100px -3px;
+	background-size: 300px auto;
+}
+.withdrawalDe_ing{
+	background: url("../images/money_incon.png") no-repeat -200px -3px;
+	background-size: 300px auto;
+}
+.withdrawal_apply{
+  display: inline-block;
+  padding-top: 30px;
+  clear: both;
+  width:100%;;
+}
+.withdrawal_deal,.withdrawal_suc{
+  display: inline-block;
+  clear: both;
+  width:100%;
+}
+.withdrawal_suc .apply_left{
+	padding: 0px;
+}
+.withdrawal_listCentent{
+	background: #fff;
+	border-bottom: 1px solid #e1e1e1;	
+}
+.withdrawal_topC{
+	padding: 40px 0 20px 0;
+	text-align: center;
+	background-color: #fff;
+}
+
+
+
+.withdrawal_schedule{
+	background: #fff;
+	margin-top: 15px;
+     border-top: 1px solid #e1e1e1;
+     padding-bottom: 50px;
+}
+.title_schedule{
+	width: 100%;
+	line-height: 3;
+	padding: 0 20px;
+	border-bottom: 1px solid #e1e1e1;
+}
+.first_apply{
+	 padding-left:20px ;
+}
+.apply_left{
+	     float: left;
+		 position: relative;
+		 padding-bottom: 40px;
+}
+.withdrawal_schedule .mui-icon{
+	font-size: 40px;
+	color: #cccbcb;
+}
+.apply_right{
+	float: left;
+}
+.apply_right p{
+	   width: 100%;
+	   padding-left: 30px;
+	   line-height: 1.5;
+	   margin: 0px;
+
+}
+.apply_right p:first-child{
+	font-size: 18px;
+		   color:#6a6a6a;
+}
+.apply_right p:nth-child(2){
+	color: #bebebe;
+}
+.success_deal .apply_right p,.success_deal i.mui-icon{
+	color:#39c5d4;
+}
+.no_withdrawalList{
+	text-align:center;
+	padding-top:60px ;
+    color: #cccbcb;
+}
+.no_withdrawalList .no_money{
+	font-size: 80px;
+
+}
+.no_withdrawalList p{
+	line-height: 3;
+}
+/*提现申请成功*/
+.white_back{
+	background: #fff!important;
+}
+ i.ok_with{
+	font-size: 80px;
+	color: #3fc7d5;
+}
+ i.fail_with{
+	font-size: 80px;
+	color: #d32929;
+}
+.show_icon{
+	text-align: center;
+	padding: 40px 0px;	
+}
+.show_icon p{
+	line-height: 4;
+	color: #3fc7d5;
+}
+.btu_content{
+	padding:50px 5px ;
+	text-align:center ;
+}
+.btu_content button{
+	margin:0 5px;
+	height: 40px;
+	width: 120px;
+	border: 1px solid #39c5d4;
+	border-radius: 5px;
+    color: #39c5d4;
+}
+.btu_content button:active{
+	background-color: #39c5d4 !important;
+	color: #ffffff;
+}
+.mui-table-view{
+	background-color: #efeff4;
+}

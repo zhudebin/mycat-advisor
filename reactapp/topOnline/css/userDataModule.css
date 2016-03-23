@@ -1,0 +1,376 @@
+body,.mui-content,.mui-bar~.mui-content .mui-fullscreen{
+	background-color: #FFFFFF;
+}
+/*重构mui的css*/
+.mui-segmented-control.mui-scroll-wrapper{
+	height: 40px;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	border-bottom: 2px solid #39c5d4 !important;
+	color: #39c5d4;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item{
+	color: #6a6a6a;
+	font-size: 15px;
+	padding: 0 15px;
+}
+.mui-segmented-control .mui-control-item{
+	height: 40px;
+	line-height: 40px;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+	border: none;
+}
+.header_right {
+	padding-top: 10px;
+	font-size: 17px !important;
+}
+.mui-content > .mui-table-view:first-child{
+	margin-top: 0;
+}
+.mui-table-view-cell::after{
+	left: 40px;
+}
+.mui-table-view-cell{
+	padding:14px 15px;
+}
+.mui-table-view-cell > a:not(.mui-btn){
+	margin: -14px -15px;
+}
+.mui-table-view .mui-table-view-cell a{
+	color: #6A6A6A;
+	font-size: 16px;
+}
+.mui-table-view .mui-table-view-cell a i.iconfont{
+	font-size: 22px;
+	color: #39c5d4;
+	margin-right: 5px;
+}
+.chart{
+	width: 100%;
+	min-height: 200px;
+	padding: 10px 0;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #FFFFFF;
+}
+.chartTableData{
+	width: auto;
+	height: auto;
+	padding: 15px;
+	background-color: #FFFFFF;
+}
+.chartTableData table{
+	width: 100%;
+	height: auto;
+	color: #6a6a6a;
+	border: 1px solid #e2e2e2;
+	border-collapse: collapse;
+	text-align: center;
+}
+.chartTableData table thead{
+	background-color: #f5f4f3;
+	height: 45px;
+	line-height: 45px;
+	color: #ecb339;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+}
+.chartTableData table tbody{
+	font-size: 14px;
+}
+
+@media only screen and (max-width:420px ) {
+	.chartTableData table thead{
+		font-size: 14px;
+	}
+	.chartTableData table tbody{
+		font-size: 12px;
+	}
+}
+
+.chartTableData table tbody tr td,.chartTableData table thead tr th{
+	border-right: 1px solid #e2e2e2;
+}
+.chartTableData table tbody tr td:last-child,
+.chartTableData table thead tr th:last-child{
+	border-right: none;
+}
+.chartTableData table tbody tr td{
+	height: 40px;
+	line-height: 40px;
+}
+.chartTableData table tbody tr:nth-child(2n){
+	background-color: #f5f4f3;
+}
+.dataResult{
+	width: 100%;
+	height: auto;
+	background-color: #FFFFFF;	
+}
+.dataResult h2{
+	font-size: 18px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #e2e2e2;
+	padding-left: 15px;
+}
+.dataResult ul{
+	padding:0 15px 0 30px;
+}
+.dataResult ul li{
+	font-size: 14px;
+	color: #bebebe;
+	margin-bottom: 5px;
+}
+.dataResult ul li font{
+	color: #ecb339;
+}
+
+/*查询模块*/
+/*重置mui样式*/
+.recordChart{
+	width: 100%;
+	height: 220px;
+	background: #EDEDED;
+	background: -webkit-linear-gradient(top, #EDEDED, #EDEDED);
+	background: -moz-linear-gradient(top, #EDEDED, #EDEDED);
+}
+.recordInfo{
+	width: 100%;
+	height: auto;
+	margin-top: 15px;
+}
+.recordInfo,.recordInfo p,.recordInfo h1,.recordInfo h2{
+	text-align: center;
+	color: #999999;
+}
+.recordInfo p{
+	font-size: 14px;
+	line-height: 1.2;
+	margin-bottom: 0;
+}
+.recordInfo h1,.recordInfo h2{
+	font-size: 40px;
+	color: #3cc8d7;
+	line-height: 1.2;
+}
+.recordInfo h1{
+	line-height: 1.8;
+}
+.recordInfo h2{
+	font-size: 24px;
+	line-height: 1.8;
+	margin: 0;
+}
+.recordInfo div.d_box{
+	padding: 15px 0;
+	border: 1px solid #e1e1e1;
+	border-left: none;
+	border-right: none;
+}
+.recordInfo div.d_box div.d_flex:first-child{
+	border-right: 1px solid #e1e1e1;
+}
+
+
+p.selectTimeTitle{
+	text-align: center;
+	line-height: 3;
+	font-size: 16px;
+	color: #bebebe;
+	margin-top: 10px;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll.searchNav{
+	width: 80%;
+	height: 47px;
+	margin: 0 10%;
+	border:1px solid #39c5d4;
+	border-radius:50px;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll.searchNav .mui-control-item{
+	background-color: #ffffff;
+	border-radius: 50px;
+	-webkit-border-radius: 50px;
+	height: 45px;
+	line-height: 45px;
+	color: #6a6a6a;
+    background-clip: padding-box;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll.searchNav .mui-control-item.mui-active{
+	background-color: #39c5d4;
+	color: #FFFFFF;
+}
+.selectTime{
+	width: 100%;
+	height: auto;
+	padding: 15px 0;
+	text-align: center;
+}
+.selectTime p{
+	color: #39c5d4;
+	line-height: 1;
+	font-size: 20px;
+	margin: 8px;
+}
+.selectTime p i.iconfont{
+	font-size: 19px;
+}
+p.selectTimedesc{
+	padding: 0 15%;
+	text-align: center;
+	font-size: 12px;
+	color: #bebebe;
+	line-height: 1.8;
+}
+.mui-content-padded{
+	margin-top: 20px;
+}
+.mui-content-padded button{
+	padding: 10px 0;
+	font-size: 16px;
+	color: #ffffff;
+	background-color: #c0bfbf;
+	border-color: #c0bfbf;
+}
+.mui-content-padded button:active{
+	background-color: #c0bfbf;
+	border-color: #c0bfbf;
+}
+.mui-content-padded button.selectIt{
+	background-color: #39c5d4;
+	border-color: #39c5d4;
+}
+.mui-content-padded button.selectIt:active{
+	background-color: #24aebd;
+	border-color: #24aebd;
+}
+
+.dataSearch{
+	width: auto;
+	height: auto;
+	padding: 0 10px;
+}
+.dataSearch p{
+	margin-bottom: 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+.dataSearch p.dataSearchInput{
+	position: relative;
+}
+.dataSearch p.dataSearchInput input{
+	margin-bottom: 0;
+	font-size: 16px;
+}
+.dataSearch p.dataSearchInput i.iconfont{
+	position: absolute;
+	z-index: 9;
+	top: 9px;
+	right: 9px;
+}
+
+@media only screen and (min-width:500px ) {
+	.dataSearch{
+		padding: 0 10%;
+	}
+	.dataSearch p{
+		display: inline-block;
+	}
+	.dataSearch p.dataSearchInput{
+		width: 47%;
+	}
+	.dataSearch p:nth-child(2){
+		width: 3%;
+	}
+}
+
+.searchResult{
+	width: 100%;
+	height: auto;
+	padding-bottom: 20px;
+	background-color: #43cbdb;
+}
+
+.searchResult p{
+	text-align: center;
+	color: #FFFFFF;
+	line-height: 1.5;
+	font-size: 22px;
+	margin-bottom: 0;
+}
+.searchResult p span{
+	color: #c9f8fd;
+	font-size: 16px;
+	line-height: 2.5;
+}
+p.searchMsg{
+	color: #bebebe;
+	font-size: 14px;
+	line-height: 2;
+	text-indent: 1em;
+}
+p.searchMsg i.iconfont{
+	font-size: 18px;
+	margin-right: 10px;
+	font-style: normal;
+}
+.refreshTableData{
+	width: 100%;
+	padding: 0;
+}
+.refreshTableData .chartTableTitle{
+	width: 100%;
+	height: 92px;
+	padding: 0 15px;
+	background-color: #ffffff;
+	position: fixed;
+	top: 44px;
+	z-index: 99;
+}
+.refreshTableData .chartTableTitle p.searchMsg{
+	text-indent: 0;
+}
+.refreshTableData .chartTableTitle table.tableTitle{
+	height: 45px;
+	line-height: 45px;
+	background-color: #f5f4f3;
+	overflow: hidden;
+}
+.refreshTableData .chartTableTitle table.tableTitle tr th{
+	width: 23%;
+	color: #ecb339;
+	font-size: 16px;
+	font-weight: normal;
+	border-right: 1px solid #e2e2e2;
+}
+.refreshTableData .chartTableTitle table.tableTitle tr th:first-child{
+	width: 31%;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll{
+	padding: 0 16px 0 15px;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll table{
+	text-align: center;
+	border: none !important;
+	border-collapse: collapse;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll table tbody{
+	border: 1px solid #e2e2e2;
+	border-top: none;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll table tr td{
+	width: 23%;
+	font-size: 14px;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll table tr td:first-child{
+	width: 31%;
+}
+.refreshTableData .mui-scroll-wrapper .mui-scroll table tr td:last-child{
+	border-right: none;
+}
+@media only screen and (max-width:420px ) {
+	.refreshTableData .chartTableTitle table.tableTitle tr th{
+		font-size: 14px;
+	}
+}

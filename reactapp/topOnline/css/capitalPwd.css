@@ -1,0 +1,35 @@
+/*重构部分css样式*/
+.Forgot-content{
+	height: 90px;
+}
+.mui-input-group .mui-input-row{
+	/*height: 55px;
+	line-height: 74px;*/
+	color: #6a6a6a;
+	font-size: 17px;
+}
+.mui-input-row label{
+	width: 75px;
+	font-size: 14px;
+	padding: 0;
+	color: #c7c7c7;
+}
+.mui-input-row label.question{
+	color: #39c5d4;
+}
+.mui-input-row label ~ input{
+	margin-top: 15px;
+	font-size: 17px;
+}
+.mui-input-row .mui-input-clear ~ .mui-icon-clear, .mui-input-row .mui-input-speech ~ .mui-icon-speech{
+	top: 25px;
+	right: 0px;
+	left: initial;
+}
+.Password_P i.iconfont{
+	font-size: 70px;
+	color: #66cc22;
+}
+.Password_h2{
+	font-size: 20px;
+}
