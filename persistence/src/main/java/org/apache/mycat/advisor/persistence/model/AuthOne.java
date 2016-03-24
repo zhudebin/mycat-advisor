@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 /**
  * Created by cjl on 2016/3/20.
  */
-public class Authone {
+public class AuthOne {
     private Long id;
     private Byte loginstatus;
     private String password;
@@ -81,7 +81,7 @@ public class Authone {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Authone authone = (Authone) o;
+        AuthOne authone = (AuthOne) o;
 
         if (id != null ? !id.equals(authone.id) : authone.id != null) return false;
         if (loginstatus != null ? !loginstatus.equals(authone.loginstatus) : authone.loginstatus != null) return false;
