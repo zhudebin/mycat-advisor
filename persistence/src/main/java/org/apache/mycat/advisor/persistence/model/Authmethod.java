@@ -1,5 +1,6 @@
 package org.apache.mycat.advisor.persistence.model;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.sql.Timestamp;
@@ -7,30 +8,17 @@ import java.sql.Timestamp;
 /**
  * Created by cjl on 2016/3/20.
  */
-public class Authmethod {
-    @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+public class AuthMethod {
     private Long id;
-
-    @Column(name = "user_id", nullable = true, insertable = true, updatable = true)
     private Long userId;
-
-    @Column(name = "logintype", nullable = true, insertable = true, updatable = true, length = 2)
     private String logintype;
-
-    @Column(name = "loginname", nullable = true, insertable = true, updatable = true, length = 64)
     private String loginname;
-
-    @Column(name = "encrypttype", nullable = true, insertable = true, updatable = true, length = 2)
     private String encrypttype;
-
-    @Column(name = "enable", nullable = true, insertable = true, updatable = true)
     private Byte enable;
-
-    @Column(name = "lastupdatedate", nullable = false, insertable = true, updatable = true)
     private Timestamp lastupdatedate;
 
-
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public Long getId() {
         return id;
     }
@@ -39,7 +27,8 @@ public class Authmethod {
         this.id = id;
     }
 
-
+    @Basic
+    @Column(name = "user_id", nullable = true, insertable = true, updatable = true)
     public Long getUserId() {
         return userId;
     }
@@ -48,7 +37,8 @@ public class Authmethod {
         this.userId = userId;
     }
 
-
+    @Basic
+    @Column(name = "logintype", nullable = true, insertable = true, updatable = true, length = 2)
     public String getLogintype() {
         return logintype;
     }
@@ -57,7 +47,8 @@ public class Authmethod {
         this.logintype = logintype;
     }
 
-
+    @Basic
+    @Column(name = "loginname", nullable = true, insertable = true, updatable = true, length = 64)
     public String getLoginname() {
         return loginname;
     }
@@ -66,7 +57,8 @@ public class Authmethod {
         this.loginname = loginname;
     }
 
-
+    @Basic
+    @Column(name = "encrypttype", nullable = true, insertable = true, updatable = true, length = 2)
     public String getEncrypttype() {
         return encrypttype;
     }
@@ -75,7 +67,8 @@ public class Authmethod {
         this.encrypttype = encrypttype;
     }
 
-
+    @Basic
+    @Column(name = "enable", nullable = true, insertable = true, updatable = true)
     public Byte getEnable() {
         return enable;
     }
@@ -84,7 +77,8 @@ public class Authmethod {
         this.enable = enable;
     }
 
-
+    @Basic
+    @Column(name = "lastupdatedate", nullable = false, insertable = true, updatable = true)
     public Timestamp getLastupdatedate() {
         return lastupdatedate;
     }
@@ -98,7 +92,7 @@ public class Authmethod {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Authmethod that = (Authmethod) o;
+        AuthMethod that = (AuthMethod) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;

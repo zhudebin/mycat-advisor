@@ -7,15 +7,14 @@ import javax.persistence.Id;
 /**
  * Created by cjl on 2016/3/20.
  */
-public class Sensitiveword {
-    @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+public class SensitiveWord {
     private Long id;
     private String groupName;
     private String sensitiveword;
     private Byte enable;
 
-
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     public Long getId() {
         return id;
     }
@@ -59,7 +58,7 @@ public class Sensitiveword {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Sensitiveword that = (Sensitiveword) o;
+        SensitiveWord that = (SensitiveWord) o;
 
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (groupName != null ? !groupName.equals(that.groupName) : that.groupName != null) return false;
