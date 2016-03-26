@@ -24,15 +24,14 @@ public class UserCompanyServiceImpl extends BaseServiceImpl<TabCompany> implemen
         return mapper;
     }
 
-    @Override
     public boolean save(TabCompany o) {
         if (o.getId() != null) {
             o.setUpdateTime(new Date());
-            return super.update(o);
+        } else {
+            o.setInsertTime(new Date());
+            o.setUpdateTime(new Date());
+            o.setDelFlag(0);
         }
-        o.setDelFlag(0);
-        o.setInsertTime(new Date());
-        o.setUpdateTime(new Date());
-        return super.save(o);
+        return super.saveOrUpdate(o);
     }
 }

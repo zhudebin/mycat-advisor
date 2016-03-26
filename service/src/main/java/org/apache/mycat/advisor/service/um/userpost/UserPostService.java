@@ -7,5 +7,5 @@ import org.apache.mycat.advisor.service.base.BaseService;
  * Created by cjl on 2016/3/18.
  */
 public interface UserPostService extends BaseService<TabPostInfo> {
-
+    public boolean save(TabPostInfo o);
 }

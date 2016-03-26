@@ -53,7 +53,7 @@ public class UserInfoServiceImpl extends BaseServiceImpl<TabUserInfo> implements
         }
         o.setInsertTime(new Date());
         o.setUpdateTime(new Date());
-        return super.save(o);
+        return super.saveOrUpdate(o);
     }
 
 
