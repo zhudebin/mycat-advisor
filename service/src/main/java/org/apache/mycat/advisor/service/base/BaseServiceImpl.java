@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.mycat.advisor.common.controller.Page;
 import org.apache.mycat.advisor.persistence.util.MyMapper;
 
+import java.lang.reflect.Field;
 import java.util.Map;
 
 /**
@@ -38,30 +39,54 @@ public abstract class BaseServiceImpl<T> implements BaseService<T> {
 
 
     @Override
-    public boolean save(T o) {
+    public boolean saveOrUpdate(T o) {
         int i = 0;
-        i = myMapper().insert(o);
-       /*
-        if (o.getId() == null) {
+        Class clas = o.getClass();
+        Field field = null;
+        try {
+            field = clas.getDeclaredField("id");
+        } catch (NoSuchFieldException e) {
+            try {
+                field = clas.getDeclaredField("ID");
+            } catch (NoSuchFieldException e1) {
+            }
+        }
+        Object id = null;
+        if (field != null) {
+            System.out.println(field.getName());
+            try {
+                field.setAccessible(true);
+                id = field.get(o);
+            } catch (IllegalAccessException e) {
 
+            }
+        }
+        if (id != null) {
+            i = myMapper().updateByPrimaryKey(o);
         } else {
-            i = postInfoMapper.updateByPrimaryKey(info);
-        }*/
-        return i > 0 ? true : false;
+            i = myMapper().insert(o);
+        }
+        return i > 0;
     }
 
     @Override
     public boolean delete(Long id) {
-        return myMapper().deleteByPrimaryKey(id) > 0 ? true : false;
+        return myMapper().deleteByPrimaryKey(id) > 0;
     }
 
     @Override
-    public T get(Long id) {
+    public T get(long id) {
         return myMapper().selectByPrimaryKey(id);
     }
 
     @Override
+    public boolean insert(T o) {
+        int i = myMapper().insert(o);
+        return i > 0;
+    }
+
+    @Override
     public boolean update(T o) {
-        return myMapper().updateByPrimaryKey(o) > 0 ? true : false;
+        return myMapper().updateByPrimaryKey(o) > 0;
     }
 }
