@@ -10,6 +10,8 @@ import javax.persistence.Table;
  */
 @Table(name = "sys_authorities")
 public class SysAuthorities {
+    @Id
+    @Column(name = "AUTHORITY_ID", nullable = false, insertable = true, updatable = true)
     private Long authorityId;
     private String authorityMark;
     private String authorityName;
@@ -19,8 +21,7 @@ public class SysAuthorities {
     private Integer issys;
     private Long moduleId;
 
-    @Id
-    @Column(name = "AUTHORITY_ID", nullable = false, insertable = true, updatable = true)
+
     public Long getAuthorityId() {
         return authorityId;
     }
