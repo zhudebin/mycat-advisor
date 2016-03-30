@@ -1,0 +1,74 @@
+<div class="container">
+	{{include '../../public/breadcrumbs'}}
+
+	<div class="card">
+		<div class="card-header">
+			<h2>用户登录记录管理</h2>
+			<ul class="actions">
+				<li>
+					
+				</li>
+			</ul>
+		</div>
+
+		<div class="bootgrid-header container-fluid">
+			<form id="frmSearch" action="#um/userLoginInfo/list?tpl=um/userLoginInfo/index" role="form">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="zmdi zmdi-search"></i></span>
+
+							<div class="fg-line">
+								<input type="text" class="form-control auto-complete" name="name"
+									   data-url="_data/typeahead/all.json" value="{{query.name}}" hidden="true"
+									   placeholder="用户名称进行搜索">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<button type="button" class="btn btn-primary btn-sm m-t-5 waves-effect btn-search">
+							{{lang.btn.search}}
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover table-ellipsis">
+				<thead>
+				<tr>
+					<th width="5%">#</th>
+					<th width="10%">用户名称</th>
+					<th width="10%">最后登录时间</th>
+					<th width="10%">登录时间</th>
+					<th width="10%">退出时间</th>
+					<th width="10%">最后登录ip</th>
+					<th width="10%">登录ip</th>
+					<th width="8%">状态</th>
+					<th width="*">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				{{each list}}
+				<tr>
+					<td>{{$index+1}}</td>
+					<td title="{{$value.name}}">{{$value.username}}</td>
+					<td title="">{{$value.lastlogintime | dateFormat}}</td>
+					<td title="">{{$value.logintime | dateFormat}}</td>
+					<td title="">{{$value.logoutTime | dateFormat}}</td>
+					<td title="">{{$value.lastipaddr}}</td>
+					<td title="">{{$value.ipaddr}}</td>
+					<td title="">{{$value.status}}</td>
+					<td>
+						<button type="button" class="btn btn-xs btn-danger btn-icon btn-del"
+								data-url="um/userLoginInfo/del/{{$value.id}}">
+							<span class="zmdi zmdi-delete"></span> </button>
+					</td>
+				</tr>
+				{{/each}}
+				</tbody>
+			</table>
+		</div>
+		{{#pagination}}
+	</div>
+</div>
