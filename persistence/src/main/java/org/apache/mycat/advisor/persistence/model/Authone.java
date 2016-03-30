@@ -9,6 +9,8 @@ import java.sql.Timestamp;
  * Created by cjl on 2016/3/20.
  */
 public class AuthOne {
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     private Long id;
     private Byte loginstatus;
     private String password;
@@ -16,8 +18,7 @@ public class AuthOne {
     private String onlinestatus;
     private Timestamp lastupdatedate;
 
-    @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+
     public Long getId() {
         return id;
     }

@@ -9,6 +9,8 @@ import java.sql.Timestamp;
  * Created by cjl on 2016/3/20.
  */
 public class AuthMethod {
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     private Long id;
     private Long userId;
     private String logintype;

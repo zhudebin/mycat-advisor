@@ -8,13 +8,14 @@ import javax.persistence.Id;
  * Created by cjl on 2016/3/20.
  */
 public class SensitiveWord {
+    @Id
+    @Column(name = "id", nullable = false, insertable = true, updatable = true)
     private Long id;
     private String groupName;
     private String sensitiveword;
     private Byte enable;
 
-    @Id
-    @Column(name = "id", nullable = false, insertable = true, updatable = true)
+
     public Long getId() {
         return id;
     }
