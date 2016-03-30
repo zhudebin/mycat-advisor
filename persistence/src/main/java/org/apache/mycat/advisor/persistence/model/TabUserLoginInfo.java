@@ -4,6 +4,8 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
 import java.sql.Timestamp;
 
 /**
@@ -15,6 +17,8 @@ public class TabUserLoginInfo {
     @Column(name = "id", nullable = false, insertable = true, updatable = true)
     private Long id;
     private Long userId;
+    @Transient
+    private  String username;
     private Timestamp lastlogintime;
     private Timestamp logintime;
     private Timestamp logoutTime;
@@ -123,8 +127,17 @@ public class TabUserLoginInfo {
     public void setStatus(Integer status) {
         this.status = status;
     }
+    @Basic
+    @Column(name = "username", nullable = true, insertable = false, updatable = false)
+    public String getUsername() {
+		return username;
+	}
 
-    @Override
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
