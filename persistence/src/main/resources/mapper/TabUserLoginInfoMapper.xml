@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper namespace="org.apache.mycat.advisor.persistence.dao.TabUserLoginInfoMapper">
+
+        <select id="listByUserName" parameterType="org.apache.mycat.advisor.persistence.model.TabUserLoginInfo" resultType="org.apache.mycat.advisor.persistence.model.TabUserLoginInfo">
+           SELECT login.id as id,login.user_id as userId,login.lastlogintime AS lastlogintime,login.logintime AS logintime,
+			  login.logout_time AS logoutTime,login.lastmacaddr AS lastmacaddr,login.macaddr AS macaddr,login.lastipaddr AS lastipaddr,
+			  login.ipaddr AS ipaddr,login.status AS status,user.username as username
+			  FROM tab_user_login_info login inner join tab_user_info user on user.id=login.user_id
+			  <where>
+			      <if test="username!=null and username!=''"> user.username like CONCAT('%',#{username},'%') </if>
+			  </where>
+        </select>
+
+</mapper>
