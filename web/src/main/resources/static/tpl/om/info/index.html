@@ -1,0 +1,83 @@
+<div class="container">
+	{{include '../../public/breadcrumbs'}}
+
+	<div class="card">
+		<div class="card-header">
+			<h2>订单信息管理</h2>
+			<ul class="actions">
+				<li>
+					<a href="#om/info/init?tpl=om/info/save" class="btn-modal">
+						<i class="zmdi zmdi-plus"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="bootgrid-header container-fluid">
+			<form id="frmSearch" action="#om/info/list?tpl=om/info/save" role="form">
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="input-group">
+							<span class="input-group-addon"><i class="zmdi zmdi-search"></i></span>
+
+							<div class="fg-line">
+								<input type="text" class="form-control auto-complete" name="code"
+									   data-url="_data/typeahead/all.json" value="{{query.code}}" hidden="true"
+									   placeholder="名称和编码进行搜索">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<button type="button" class="btn btn-primary btn-sm m-t-5 waves-effect btn-search">
+							{{lang.btn.search}}
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover table-ellipsis">
+				<thead>
+				<tr>
+					<th width="5%">#</th>
+					<th width="10%">订单类型</th>
+					<th width="10%">下单人</th>
+					<th width="10%">问题id</th>
+					<th width="5%">顾问id</th>
+					<th width="10%">状态</th>
+					<th width="13%">支付交易号</th>
+					<th width="10%">支付渠道</th>
+					<th width="5%">订单流程</th>
+					<th width="*">操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				{{each list}}
+				<tr>
+					<td>{{$index+1}}</td>
+					<td title="">{{if $value.type==3}} 远程订单 {{else if type===4}} 在线订单  {{else}} 现场订单 {{/if}}</td>
+					<td title="{{$value.placeId}}">{{$value.placeId}}</td>
+					<td title="{{$value.problemId}}">{{$value.problemId}}</td>
+					<td title="{{$value.advisorId}}">{{$value.advisorId}}</td>
+					<td title="">{{if $value.status==1 }}可用{{else}}不可用{{/if}}</td>
+					<td title="{{$value.paynumber}}">{{$value.paynumber }}</td>
+					<td title="{{$value.paytype}}">{{$value.paytype}}</td>
+					<td title="{{$value.orderStep}}">
+						{{$value.orderStep}}
+					</td>
+					<td>
+						<button type="button" class="btn btn-xs btn-default btn-icon btn-modal waves-effect waves-circle waves-float waves-effect waves-circle waves-float"
+								 data-href="om/info/get/{{$value.id}}?tpl=om/info/save">
+							<span class="zmdi zmdi-edit"></span> </button>
+						<button type="button" class="btn btn-xs btn-danger btn-icon btn-del"
+								data-url="om/info/del/{{$value.id}}">
+							<span class="zmdi zmdi-delete"></span> </button>
+					</td>
+				</tr>
+				{{/each}}
+				</tbody>
+			</table>
+		</div>
+		{{#pagination}}
+	</div>
+</div>
