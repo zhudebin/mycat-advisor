@@ -1,6 +1,5 @@
 package org.apache.mycat.advisor.persistence.model;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.sql.Timestamp;
@@ -9,14 +8,19 @@ import java.sql.Timestamp;
  * Created by cjl on 2016/3/20.
  */
 public class ExamineTemplet {
-    private Integer templateid;
-    private String examinetype;
-    private String url;
-    private String describe;
-    private Timestamp lastupdatetime;
-
     @Id
     @Column(name = "templateid", nullable = false, insertable = true, updatable = true)
+    private Integer templateid;
+    @Column(name = "examinetype", nullable = true, insertable = true, updatable = true, length = 64)
+    private String examinetype;
+    @Column(name = "url", nullable = true, insertable = true, updatable = true, length = 1024)
+    private String url;
+    @Column(name = "describe", nullable = true, insertable = true, updatable = true, length = 256)
+    private String describe;
+    @Column(name = "lastupdatetime", nullable = false, insertable = true, updatable = true)
+    private Timestamp lastupdatetime;
+
+
     public Integer getTemplateid() {
         return templateid;
     }
@@ -25,8 +29,7 @@ public class ExamineTemplet {
         this.templateid = templateid;
     }
 
-    @Basic
-    @Column(name = "examinetype", nullable = true, insertable = true, updatable = true, length = 64)
+
     public String getExaminetype() {
         return examinetype;
     }
@@ -35,8 +38,7 @@ public class ExamineTemplet {
         this.examinetype = examinetype;
     }
 
-    @Basic
-    @Column(name = "url", nullable = true, insertable = true, updatable = true, length = 1024)
+
     public String getUrl() {
         return url;
     }
@@ -45,8 +47,7 @@ public class ExamineTemplet {
         this.url = url;
     }
 
-    @Basic
-    @Column(name = "describe", nullable = true, insertable = true, updatable = true, length = 256)
+
     public String getDescribe() {
         return describe;
     }
@@ -55,8 +56,7 @@ public class ExamineTemplet {
         this.describe = describe;
     }
 
-    @Basic
-    @Column(name = "lastupdatetime", nullable = false, insertable = true, updatable = true)
+
     public Timestamp getLastupdatetime() {
         return lastupdatetime;
     }
